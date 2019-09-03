@@ -39,7 +39,7 @@ export default {
       const clientHeight = document.body.offsetHeight
       const manDayWidth = this.dialogWidth + 40
       const manDayHeight = this.dialogHeight + 40
-      const tdWidth = Number(this.selectedArea.width)
+      // const tdWidth = Number(this.selectedArea.width)
       const tdHeight = Number(this.selectedArea.height)
       const tdTop = Number(this.selectedArea.top)
       const tdLeft = Number(this.selectedArea.right)

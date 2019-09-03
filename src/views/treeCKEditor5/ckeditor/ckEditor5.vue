@@ -2,10 +2,10 @@
   <ckeditor
     v-model="displayData"
     :editor="editor"
+    :config="editorConfig"
     :value="editor"
     @ready="onReady"
     @blur="onBlur"
-    :config="editorConfig"
   />
 </template>
 <script>
@@ -46,7 +46,7 @@ export default {
   methods: {
     onBlur(editor) {
       const editorValue = this.instance.getData()
-      if(editorValue) {
+      if (editorValue) {
         this.$emit('post', editorValue)
       } else {
         this.$message({

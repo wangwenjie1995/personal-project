@@ -32,12 +32,20 @@
 <script>
 export default {
   name: 'TaskRecord',
-  props: ['taskRecordList', 'taskRecordTitle'],
+  props: {
+    taskRecordList: {
+      type: Array,
+      default: () => {
+        return {}
+      }
+    },
+    taskRecordTitle: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {}
-  },
-  watch: {
-    taskRecordList(value) {}
   }
 }
 </script>

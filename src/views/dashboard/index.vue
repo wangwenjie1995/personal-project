@@ -1,6 +1,8 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <iframe src="/pdf/web/viewer.html?file=wangwenjie.pdf" style="width: 100%;height:100%;" scrolling="no">
+      您的浏览器不支持PDF阅读
+    </iframe>
   </div>
 </template>
 
@@ -20,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 .dashboard {
   &-container {
-    margin: 30px;
+    height: 100%;
   }
   &-text {
     font-size: 30px;

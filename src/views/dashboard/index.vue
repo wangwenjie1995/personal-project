@@ -3,7 +3,7 @@
     <!-- <iframe src="https://github.com" style="width: 100%;height:100%;" scrolling="no">
       您的浏览器不支持PDF阅读
     </iframe> -->
-    <embed src="/pdf/web/viewer.html?file=wangwenjie.pdf" width="100%" height="100%">
+    <embed src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" width="100%" height="100%">
   </div>
 </template>
 

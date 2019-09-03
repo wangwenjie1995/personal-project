@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <iframe src="/pdf/web/viewer.html?file=wangwenjie.pdf" style="width: 100%;height:100%;" scrolling="no">
+    <iframe src="/pdf/web/viewer.html?file=/pdf/web/wangwenjie.pdf" style="width: 100%;height:100%;" scrolling="no">
       您的浏览器不支持PDF阅读
     </iframe>
   </div>

@@ -88,7 +88,24 @@ export const constantRoutes = [
       }
     ]
   },
-
+  {
+    path: '/echarts',
+    component: Layout,
+    redirect: '/echarts/mixChart',
+    name: 'Echarts',
+    meta: {
+      title: 'Echart',
+      icon: 'nested'
+    },
+    children: [
+      {
+        path: 'mixChart',
+        component: () => import('@/views/echarts/mixChart'),
+        name: 'MixChart',
+        meta: { title: 'MixChart' }
+      }
+    ]
+  },
   {
     path: '/form',
     component: Layout,
@@ -96,7 +113,7 @@ export const constantRoutes = [
       {
         path: 'index',
         name: 'Form',
-        component: () => import('@/views/form/index'),
+        component: () => import('@/views/form'),
         meta: { title: 'Form', icon: 'form' }
       }
     ]

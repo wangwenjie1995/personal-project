@@ -103,6 +103,12 @@ export const constantRoutes = [
         component: () => import('@/views/echarts/mixChart'),
         name: 'MixChart',
         meta: { title: 'MixChart' }
+      },
+      {
+        path: 'lineChart',
+        component: () => import('@/views/echarts/lineChart'),
+        name: 'LineChart',
+        meta: { title: 'LineChart' }
       }
     ]
   },

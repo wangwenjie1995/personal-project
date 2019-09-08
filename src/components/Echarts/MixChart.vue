@@ -4,9 +4,11 @@
 
 <script>
 import echarts from 'echarts'
+import chartResize from './Mixins/resize'
 
 export default {
   name: 'MixChart',
+  mixins: [chartResize],
   props: {
     data: {
       type: Array,

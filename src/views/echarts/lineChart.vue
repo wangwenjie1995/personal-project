@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import MixChart from '@/components/Echarts/MixChart'
+import MixChart from '@/components/Echarts/LineChart'
 
 export default {
-  name: 'MixChartDemo',
+  name: 'LineChartDemo',
   components: { MixChart },
   data() {
     return {

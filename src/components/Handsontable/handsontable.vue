@@ -203,7 +203,20 @@ export default {
       newTaskGroup: {}
     }
   },
-  watch: {},
+  computed: {
+    sidebar() {
+      return this.$store.state.app.sidebar.opened
+    }
+  },
+  watch: {
+    sidebar(val) {
+      setTimeout(() => {
+        this.$refs.textHot.hotInstance.updateSettings({
+          width: '100%'
+        })
+      }, 280)
+    }
+  },
   created() {
     const that = this
     this.fullscreeLoading = true

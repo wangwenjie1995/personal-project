@@ -20,9 +20,18 @@ export default {
           this.chart.resize()
         }
       }, 200)
+    },
+    sidebar() {
+      return this.$store.state.app.sidebar.opened
     }
   },
-
+  watch: {
+    sidebar(val) {
+      setTimeout(() => {
+        this.chart.resize()
+      }, 280)
+    }
+  },
   methods: {
     $_chartMixin_initResizeEvent() {
       window.addEventListener('resize', this.$_chartMixin_chartResize)

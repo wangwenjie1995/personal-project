@@ -35,33 +35,11 @@ export default {
   },
   data() {
     return {
-      chart: null,
-      series: [
-        { type: 'line', smooth: true, seriesLayoutBy: 'row' },
-        { type: 'line', smooth: true, seriesLayoutBy: 'row' },
-        { type: 'line', smooth: true, seriesLayoutBy: 'row' },
-        { type: 'line', smooth: true, seriesLayoutBy: 'row' },
-        { type: 'line', smooth: true, seriesLayoutBy: 'row' },
-        {
-          type: 'pie',
-          id: 'pie',
-          radius: '30%',
-          center: ['50%', '25%'],
-          label: {
-            formatter: '{b}: {@2012} ({d}%)'
-          },
-          encode: {
-            itemName: 'product',
-            value: '2012',
-            tooltip: '2012'
-          }
-        }
-      ]
+      chart: null
     }
   },
   watch: {
     data() {
-      this.series.unshift({ type: 'line', smooth: true, seriesLayoutBy: 'row' })
       this.initChart()
     }
   },

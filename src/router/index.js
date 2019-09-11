@@ -31,11 +31,11 @@ import Layout from '@/layout'
  * all roles can be accessed
  */
 export const constantRoutes = [
-  {
-    path: '/login',
-    component: () => import('@/views/login/index'),
-    hidden: true
-  },
+  // {
+  //   path: '/login',
+  //   component: () => import('@/views/login/index'),
+  //   hidden: true
+  // },
 
   {
     path: '/404',
@@ -99,19 +99,19 @@ export const constantRoutes = [
     },
     children: [
       {
-        path: 'mixChart',
+        path: 'MixChartDemo',
         component: () => import('@/views/echarts/mixChart'),
         name: 'MixChartDemo',
         meta: { title: 'MixChart' }
       },
       {
-        path: 'lineChart',
+        path: 'LineChartDemo',
         component: () => import('@/views/echarts/lineChart'),
         name: 'LineChartDemo',
         meta: { title: 'LineChart' }
       },
       {
-        path: 'barChart',
+        path: 'BarChartDemo',
         component: () => import('@/views/echarts/barChart'),
         name: 'BarChartDemo',
         meta: { title: 'BarChart' }
@@ -203,6 +203,22 @@ export const constantRoutes = [
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
+
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+  const mobileLogin = {
+    path: '/login',
+    component: () => import('@/views/login/mobileLogin'),
+    hidden: true
+  }
+  constantRoutes.unshift(mobileLogin)
+} else {
+  const pcLogin = {
+    path: '/login',
+    component: () => import('@/views/login/index'),
+    hidden: true
+  }
+  constantRoutes.unshift(pcLogin)
+}
 
 const createRouter = () => new Router({
   // mode: 'history', // require service support

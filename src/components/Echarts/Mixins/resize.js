@@ -50,7 +50,8 @@ export default {
     this.$_chartMixin_destroyResizeEvent()
   },
 
-  activeted() {
+  activated() {
+    this.chart.resize() // 解决移动端问题：keep-alive下，切换到其他页面，在切换回来，echart大小会变化
     this.$_chartMixin_initResizeEvent()
   },
   deactivated() {

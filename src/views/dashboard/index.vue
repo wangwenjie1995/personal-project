@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <iframe src="https://docs.google.com/document/d/e/2PACX-1vRpPLw6K6huEHC1WX4YPPVpd1Yu67747BhTydMtgJHqiQGiVDtl4RA8m0SRTGxi2q8VSDxyeFYS2Ziv/pub?embedded=true">
+    <iframe src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf">
       您的浏览器不支持PDF阅读
     </iframe>
     <!-- <iframe src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" style="width: 100%;height:60px;" scrolling="no" type="application/pdf">

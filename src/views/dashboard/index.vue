@@ -1,16 +1,17 @@
 <template>
   <div class="dashboard-container">
-    <iframe src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" style="width: 100%;height:100%;" scrolling="no">
+    <iframe src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" style="width: 100%;height:100%;" scrolling="no" type="application/pdf">
       您的浏览器不支持PDF阅读
+      <a href="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf">Download PDF</a>
     </iframe>
 
     <!-- <object data="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" type="application/pdf" width="100%" height="100%">
-      This browser does not support PDFs. Please download the PDF to view it: <a href="/index.pdf">Download PDF</a>
+      This browser does not support PDFs. Please download the PDF to view it: <a href="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf">Download PDF</a>
     </object> -->
     <!-- why bottom: 3px; 使用embed打开pdf,设置height:100%; 高度多了3px bug -->
     <!-- 移动端不支持embed显示pdf -->
     <!-- <div style="position: absolute; top: 0; right: 0; bottom: 3px; left: 0;">
-      <embed src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" width="100%" height="100%">
+      <embed src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" name="plugin" width="100%" height="100%" type="application/pdf">
     </div> -->
   </div>
 </template>

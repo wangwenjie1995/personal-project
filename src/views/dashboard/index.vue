@@ -1,10 +1,11 @@
 <template>
   <div class="dashboard-container">
     <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;-webkit-overflow-scrolling: touch;overflow-y: scroll;">
-      <iframe src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" width="100%" height="100%" scrolling="yes" type="application/pdf">
+      <!-- <iframe src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" width="100%" height="100%" scrolling="yes" type="application/pdf">
         您的浏览器不支持PDF阅读
         <a href="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf">Download PDF</a>
-      </iframe>
+      </iframe> -->
+      <pdf src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" style="width: 100%;height: 100%;" />
     </div>
     <!-- <iframe src="https://wangwenjie1995.github.io/wangwenjie.github.io/wangwenjie.pdf" style="width: 100%;height:60px;" scrolling="no" type="application/pdf">
       您的浏览器不支持PDF阅读
@@ -21,12 +22,15 @@
     </div> -->
   </div>
 </template>
-
 <script>
 import { mapGetters } from 'vuex'
+import pdf from 'vue-pdf'
 
 export default {
   name: 'Dashboard',
+  components: {
+    pdf
+  },
   computed: {
     ...mapGetters([
       'name'

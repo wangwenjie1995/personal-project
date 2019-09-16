@@ -1,6 +1,7 @@
 'use strict'
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -25,9 +26,9 @@ module.exports = {
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
   publicPath: './', // github发布：https://zhuanlan.zhihu.com/p/38480155
-  outputDir: 'docs',
+  outputDir: 'docs', // 打包输出文件
   assetsDir: 'static',
-  lintOnSave: process.env.NODE_ENV === 'development',
+  lintOnSave: process.env.NODE_ENV === 'development', // 保存时lint
   productionSourceMap: false,
   devServer: {
     port: port,
@@ -59,6 +60,18 @@ module.exports = {
       }
     }
   },
+  // config => { // 这段代码是gzip,服务器端还要配置
+  //   if(process.env.NODE_ENV === 'production') {
+  //     return {
+  //       plugins: [new CompressionPlugin({
+  //         test: /\.js$|\.html$|\.css/,
+  //         threshold: 10240,
+  //         deleteOriginalAssets: false // 是否删除源文件
+  //       })]
+  //     }
+  //   }
+  // },
+  
   chainWebpack(config) { // 是一个函数，会接收一个基于 webpack-chain 的 ChainableConfig 实例。允许对内部的 webpack 配置进行更细粒度的修改。
     config.plugins.delete('preload') // TODO: need test
     config.plugins.delete('prefetch') // TODO: need test
@@ -109,7 +122,7 @@ module.exports = {
             }])
             .end()
           config
-            .optimization.splitChunks({
+            .optimization.splitChunks({ //利用splitChunks将每个依赖包单独打包
               chunks: 'all',
               cacheGroups: {
                 libs: {

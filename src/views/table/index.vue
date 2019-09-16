@@ -40,13 +40,33 @@
         </template>
       </el-table-column>
     </el-table>
+    <el-tooltip placement="top" content="tooltip">
+      <back-to-top :visibility-height="300" :back-position="50" transition-name="fade" />
+    </el-tooltip>
+    <el-backtop :bottom="100" :right="50">
+      <div
+        style="{
+          height: 100%;
+          width: 100%;
+          background-color: #f2f5f6;
+          box-shadow: 0 0 6px rgba(0,0,0, .12);
+          text-align: center;
+          line-height: 40px;
+          color: #1989fa;
+        }"
+      >
+        UP
+      </div>
+    </el-backtop>
   </div>
 </template>
 
 <script>
 import { getList } from '@/api/table'
+import BackToTop from '@/components/BackToTop'
 
 export default {
+  components: { BackToTop },
   filters: {
     statusFilter(status) {
       const statusMap = {
